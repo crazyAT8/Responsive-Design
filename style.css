@@ -222,7 +222,7 @@ section {
                                                                                          /*====================
                                                                                                             Chefs
                                                                                         ======================*/
-.expert .content {
+.expert .content {                  /*not working at the moment 2/19/22*/
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

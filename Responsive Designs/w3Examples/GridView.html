@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid View</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .header {
+            border: 1px solid black;
+            padding: 15px;
+        }
+
+        .roww::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        [class*="col-"] {              /* this is calling all classes that begin with col- */
+            float: left;
+            padding: 15px;
+            border: 1px solid blue;
+        }
+                                        /* you could just use widths in the 2 main divs in row */
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Header Section</h1>
+    </div>
+                                    <!-- wrap each row in a div -->
+    <div class="row">
+        <div class="col-3">         <!--this # represents the number of columns the section should span-->
+            <ul>
+                <li>item1</li>
+                <li>item2</li>
+                <li>item3</li>
+                <li>item4</li>
+            </ul>
+        </div>
+
+        <div class="col-9">         <!--this # represents the number of columns the section should span-->
+            <h1>Body Section</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla rem repellat ea dicta eaque asperiores aliquid, eum incidunt, distinctio quis numquam tempore, ad cupiditate temporibus nostrum ex recusandae. Illum, rem?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, tenetur beatae. Laborum, dolorem perferendis nam aliquam molestias fugit delectus aspernatur, est esse exercitationem nisi rerum saepe iure aliquid commodi sit.</p>
+        </div>
+
+    </div>
+</body>
+</html>

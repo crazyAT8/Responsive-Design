@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #333;
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            background: white;
+            height: 600px;
+            max-width: 600px;
+            border: 2px solid black;
+            border-radius: 0.25rem;
+            /* overflow: hidden; */
+        }
+
+        .header {
+            border-bottom: 2px solid black;
+            text-align: center;
+            padding: 0.5rem;
+            background: #ddd;
+        }
+
+        .footer {
+            border-bottom: 2px solid black;
+            text-align: center;
+            padding: 0.5rem;
+            background: #ddd;
+        }
+
+        .body {
+            padding: 0.5rem;
+            /* height: 100%; */
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">Header</div>
+        <div class="body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, cumque! Laborum, delectus suscipit minima, aspernatur labore eveniet modi quaerat saepe fugit at consectetur culpa earum ipsum facere eaque. Quae, ex.
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

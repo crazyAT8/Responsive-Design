@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid View + Media Query</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        html {
+            font-family: monospace, 'Courier New', Courier;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 3px 3px 3px 3px black;
+            margin: 10px;
+        }
+        .header {
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 3px 3px black;
+        }
+        .menu ul {
+            list-style-type: circle;
+            margin: 0;
+            padding: 0;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 3px 3px black;
+        }
+        .menu li {
+            padding: 8px;
+            margin: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 3px 3px black;
+        }
+        .menu li:hover {
+            background-color: azure;
+        }
+        .aside {
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 3px 3px black;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer {
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 3px 3px black;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* For desktop: */
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+            [class*="col-"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Title</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-4 menu">
+            <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+            </ul>
+        </div>
+
+        <div class="col-4">
+            <h1>Middle Section</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus laboriosam animi illo autem minima iste vel, corrupti enim rerum voluptates aspernatur pariatur, consectetur et voluptatibus perferendis ipsam necessitatibus eveniet laborum.</p>
+        </div>
+
+        <div class="col-4 right">
+            <div class="aside">
+                <h1>Side header 1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <h2>Side header 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <h2>Side header 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure mollitia pariatur culpa architecto adipisci voluptatibus molestiae. Consectetur, animi consequatur aliquam nisi perspiciatis eius eaque mollitia dicta corporis omnis dolor officia.</p>
+    </div>
+</body>
+</html>

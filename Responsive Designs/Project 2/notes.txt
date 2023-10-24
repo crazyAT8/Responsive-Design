@@ -1,0 +1,7 @@
+The goal is to start really simple
+    - you have two sides of a browser window on a desk top 
+    - left is 50% right is 50%
+    at a certain pixel you will have to size down and
+        the left will appear on top of the right 
+            and both the left and the right 
+            have to be background images with words
